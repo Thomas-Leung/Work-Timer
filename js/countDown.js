@@ -1,5 +1,6 @@
 var path = require('path');
-var minInSec, seconds, distance;
+var timer, minInSec, seconds;
+var distance = 1200; // 20 mins by default
 
 var options = [{
     title: "Time is up",
@@ -7,9 +8,10 @@ var options = [{
 }]
 
 function setTime() {
+    stopTimer();
     distance = 0;
     minInSec = parseInt(document.getElementById('minutes').value * 60, 10); // base 10
-    seconds = parseInt(document.getElementById('seconds').value, 10);
+    seconds = parseInt(document.getElementById('seconds').value * 1, 10);
 
     distance = minInSec + seconds;
     if (!isNaN(distance)) {
@@ -19,16 +21,20 @@ function setTime() {
 
 function startTimer() {
     // Update the count down every 1 second
-    var x = setInterval(function () {
+    timer = setInterval(function () {
         // If the count down is over, notify
         if (distance < 0) {
-            clearInterval(x);
+            stopTimer();
             new Notification(options[0].title, options[0]);
         } else {
             updateTime();
             distance -= 1;
         }
     }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timer);
 }
 
 function updateTime() {
