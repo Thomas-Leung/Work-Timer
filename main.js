@@ -3,13 +3,13 @@ const {
     BrowserWindow
 } = require('electron')
 
-require('electron-reload')(__dirname)
+// require('electron-reload')(__dirname)
 
 function createWindow() {
     // Create the browser window.
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 200,
+        height: 200,
         webPreferences: {
             nodeIntegration: true
         }
@@ -19,7 +19,7 @@ function createWindow() {
     win.loadFile('index.html')
 
     // Open the DevTools.
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -31,9 +31,9 @@ app.whenReady().then(createWindow)
 app.on('window-all-closed', () => {
     // On macOS it is common for applications and their menu bar
     // to stay active until the user quits explicitly with Cmd + Q
-    if (process.platform !== 'darwin') {
+    // if (process.platform !== 'darwin') {
         app.quit()
-    }
+    // }
 })
 
 app.on('activate', () => {
