@@ -20,6 +20,7 @@ function setTime() {
 }
 
 function startTimer() {
+    stopTimer();
     // Update the count down every 1 second
     timer = setInterval(function () {
         // If the count down is over, notify
