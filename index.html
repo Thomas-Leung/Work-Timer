@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html leng="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Work Timer</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript" src="js/countDown.js"></script>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    We are using node
-    <script>document.write(process.versions.node)</script>,
-    Chrome
-    <script>document.write(process.versions.chrome)</script>,
-    and Electron
-    <script>document.write(process.versions.electron)</script>.
+    <div class="container">
+        <div class="toggle-container">
+            <input type="checkbox" id="switch" name='theme'><label for="switch">Dark Mode</label>
+        </div>
+        <div class="timer-container">
+            <p id='time'>00m 00s</p>
+            <button type="button" onclick="startTimer()">Start</button>
+        </div>
+        <div class="set-time-container">
+            <input type="number" id="minutes" placeholder="Minutes" />
+            <input type='number' id="seconds" placeholder="Seconds" /><br />
+            <button type="button" onclick="setTime()">Set Time</button>
+        </div>
+    </div>
 </body>
 
 </html>

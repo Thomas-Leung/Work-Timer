@@ -1,0 +1,33 @@
+html {
+    height: 100%;
+    font-family: 'Montserrat';
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    --bg: #fcfcfc;
+    --bg-panel: #ebebeb;
+    --color-headings: #0077FF;
+    --color-text: #333333;
+}
+/* --bg: is a CSS variable */
+
+html[data-theme='dark'] {
+    --bg: #333333;
+    --bg-panel: #43434343;
+    --color-headings: #3694ff;
+    --color-text: #b5b5b5;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--color-text);
+}
+/* 
+.container {
+    background-color: var(--bg-panel);
+    margin: 5em;
+    padding: 5em;
+    border-radius: 15px;
+    display: grid;
+} */
