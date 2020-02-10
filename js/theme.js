@@ -2,14 +2,11 @@
 window.onload = function () {
     if (this.localStorage.getItem("theme") != null) {
         var theme = this.localStorage.getItem("theme");
-        this.console.log('ok');
         document.documentElement.setAttribute('data-theme', theme);
         
     }
     // name property is theme in out input in html
     var checkbox = document.querySelector('input[name=theme]');
-    this.console.log(theme);
-    this.console.log(checkbox);
     checkbox.addEventListener('change', function () {
         if (this.checked) {
             trans();

@@ -89,6 +89,10 @@ input::placeholder {
     padding: 4px;
 }
 
+input[type="number"] {
+    font-size: 12px;
+}
+
 #time {
     padding: 8px;
     font-size: 32px;
@@ -116,6 +120,7 @@ input::placeholder {
     margin-right: 12px;
     color: var(--color-text);
     right: 0;
+    cursor: pointer;
 }
 
 .material-icons.md-20 {

@@ -1,6 +1,6 @@
-var path = require('path');
 var timer, minInSec, seconds;
-var distance = 1200; // 20 mins by default
+var distance = 1200,
+    resetTime = 1200; // 20 mins by default
 
 var options = [{
     title: "Time is up",
@@ -16,6 +16,9 @@ function setTime() {
     distance = minInSec + seconds;
     if (!isNaN(distance)) {
         updateTime();
+        resetTime = distance;
+        document.getElementById('minutes').value = "";
+        document.getElementById('seconds').value = "";
     }
 }
 
@@ -36,6 +39,12 @@ function startTimer() {
 
 function stopTimer() {
     clearInterval(timer);
+}
+
+function resetTimer() {
+    stopTimer();
+    distance = resetTime;
+    updateTime();
 }
 
 function updateTime() {
