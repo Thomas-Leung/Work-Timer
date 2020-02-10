@@ -15,21 +15,23 @@
     <div class="drag-section"></div>
     <div class="container">
         <section class="mainPage">
+            <i class="material-icons md-20" id="restore">restore</i>
             <div class="timer-container">
                 <p id='time'>20m 0s</p>
-                <button type="button" onclick="startTimer()">&nbsp;Start&nbsp;</button>
-                <button type="button" onclick="stopTimer()">Pause</button>
+                <button class="mainBtn" type="button" onclick="startTimer()">&nbsp;Start&nbsp;</button>
+                <button class="mainBtn" type="button" onclick="stopTimer()">Pause</button>
             </div>
         </section>
         <section class="settingPage">
-            <h4>Settings</h4>
+            <p id='settingsTitle'>Settings</p>
             <div class="toggle-container">
-                <input type="checkbox" id="switch" name='theme'><label for="switch" style="font-size: 10px;">Dark Mode</label>
+                <input type="checkbox" id="switch" name='theme'><label for="switch" style="font-size: 10px;">Dark
+                    Mode</label>
             </div>
             <div class="set-time-container">
                 <input type="number" id="minutes" placeholder="Minutes" />
                 <input type='number' id="seconds" placeholder="Seconds" /><br />
-                <button type="button" onclick="setTime()">Set Time</button>
+                <button class="secBtn" type="button" onclick="setTime()">Set Time</button>
             </div>
         </section>
     </div>

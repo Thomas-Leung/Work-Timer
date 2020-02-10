@@ -1,3 +1,5 @@
+@import '../node_modules/material-design-icons/iconfont/material-icons.css';
+
 html {
     height: 100%;
     font-family: 'Montserrat';
@@ -27,6 +29,10 @@ body {
     color: var(--color-text);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .container {
     margin: 0px 8px;
 }
@@ -52,21 +58,31 @@ button {
     border-width: thin;
     border-radius: 20px;
     font-weight: 600;
-    padding: 10px 20px 10px 20px;
     margin: 3px;
     color: var(--color-text);
     background: var(--color-btn);
+}
+
+.mainBtn {
+    padding: 10px 20px;
+}
+
+.secBtn {
+    padding: 4px 40px;
 }
 
 button:hover {
     background: var(--color-btn-h);
 }
 
-#minutes, #seconds {
+#minutes,
+#seconds {
+    height: 20px;
     width: 80%;
-    margin: 8px;
+    margin: 6px;
     border: none;
     background: var(--color-btn);
+    color: var(--color-text);
 }
 
 input::placeholder {
@@ -80,13 +96,28 @@ input::placeholder {
 
 .mainPage {
     height: 100vh - 20px;
-    padding: 30px 0px;
+    padding: 25px 0px;
     text-align: center;
     justify-content: center;
 }
 
 .settingPage {
-    padding: 10px 0px;
+    padding-bottom: 18px;
     height: 100vh - 20px;
     text-align: center;
+}
+
+#settingsTitle {
+    font-weight: 500;
+}
+
+#restore {
+    position: absolute;
+    margin-right: 12px;
+    color: var(--color-text);
+    right: 0;
+}
+
+.material-icons.md-20 {
+    font-size: 20px;
 }
