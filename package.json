@@ -6,7 +6,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build-installer": "electron-builder",
+    "build-installers": "electron-builder -mw",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icon.icns --prune=true --out=release-builds",
     "package-win": "electron-packager . WorkTimer --platform=win32 --arch=x64",
     "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
@@ -30,12 +30,20 @@
   "build": {
     "appId": "work-timer",
     "win": {
+      "icon": "assets/icon.ico",
       "target": [
         "portable"
       ]
     },
     "portable": {
       "artifactName": "work_timer.exe"
+    },
+    "mac": {
+      "category": "Utilities",
+      "icon": "assets/icon.icns",
+      "target": [
+        "dir"
+      ]
     }
   }
 }

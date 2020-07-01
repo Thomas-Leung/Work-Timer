@@ -1,6 +1,6 @@
 var timer, minInSec, seconds;
 var distance = 1500,
-    resetTime = 1500; // 25 mins by default
+    resetTime = 1500; // 25 mins by default (need to modify in html as well)
 
 var options = [{
     title: "Time is up",
