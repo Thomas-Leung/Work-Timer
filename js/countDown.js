@@ -1,10 +1,10 @@
 var timer, minInSec, seconds;
-var distance = 1200,
-    resetTime = 1200; // 20 mins by default
+var distance = 1500,
+    resetTime = 1500; // 25 mins by default
 
 var options = [{
     title: "Time is up",
-    body: "Time to relax 20s from your work session."
+    body: "Take a break."
 }]
 
 function setTime() {
