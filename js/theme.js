@@ -3,7 +3,9 @@ window.onload = function () {
     if (this.localStorage.getItem("theme") != null) {
         var theme = this.localStorage.getItem("theme");
         document.documentElement.setAttribute('data-theme', theme);
-        
+        if (theme == "dark") {
+            document.getElementById("themeCheckbox").checked = true;
+        }
     }
     // name property is theme in out input in html
     var checkbox = document.querySelector('input[name=theme]');
