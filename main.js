@@ -10,6 +10,7 @@ function createWindow() {
     const win = new BrowserWindow({
         width: 200,
         height: 200,
+        icon: __dirname + "/assets/icon.ico", // only works for windows
         titleBarStyle: "hidden",
         webPreferences: {
             nodeIntegration: true
@@ -50,3 +51,4 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+app.allowRendererProcessReuse = true; // prepare for Electron 9
