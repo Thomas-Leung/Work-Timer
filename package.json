@@ -28,15 +28,24 @@
     "electron-builder": "^22.7.0"
   },
   "build": {
-    "appId": "work-timer",
+    "appId": "com.thomas.work-timer",
     "win": {
       "icon": "assets/icon.ico",
       "target": [
-        "portable"
-      ]
+        "portable",
+        "nsis"
+      ],
+      "requestedExecutionLevel": "requireAdministrator"
     },
     "portable": {
       "artifactName": "work_timer.exe"
+    },
+    "nsis": {
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "uninstallDisplayName": "Work Timer",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     },
     "mac": {
       "category": "Utilities",
