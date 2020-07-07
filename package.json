@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Thomas-Leung/Work-Timer#readme",
   "devDependencies": {
-    "electron": "^8.0.0",
+    "electron": "^8.2.4",
     "electron-packager": "^15.0.0",
     "electron-reload": "^1.5.0",
     "electron-builder": "^22.7.0"
